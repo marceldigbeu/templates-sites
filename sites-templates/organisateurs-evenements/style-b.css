@@ -14,8 +14,7 @@ header{padding:1.1rem 2rem;color:var(--c);text-shadow:0 0 12px var(--c);text-tra
 footer{padding:1.8rem;text-align:center;color:#7a5fa8;letter-spacing:.2em;font-size:.75rem;text-transform:uppercase}
 
 .photo{display:block;width:100%;object-fit:cover}
-.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
-html{scroll-behavior:smooth}
+.services .photo{width:130px;height:130px;border-radius:50%;margin:0 auto 1rem;grid-column:1/-1;border:4px solid var(--c2)}html{scroll-behavior:smooth}
 @keyframes rise{from{opacity:0;translate:0 24px}}
 @keyframes float{50%{translate:0 -4px}}
 .hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}

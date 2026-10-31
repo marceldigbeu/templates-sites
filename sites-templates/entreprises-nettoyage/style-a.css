@@ -2,7 +2,7 @@
 *{box-sizing:border-box;margin:0}
 body{font-family:'Segoe UI',Tahoma,sans-serif;background:#fff;color:#0b3440}
 header{background:var(--c);color:#fff;padding:1.2rem 2rem;font-weight:600;display:flex;align-items:center;gap:.6rem}
-header::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--c2);box-shadow:20px 0 0 var(--c2),40px 0 0 var(--c2)}
+header::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--c2);box-shadow:20px 0 0 var(--c2),40px 0 0 var(--c2);margin-right:44px}
 .hero{padding:5rem 2rem;background:radial-gradient(circle at 1px 1px,rgba(0,0,0,.07) 1px,transparent 0) 0 0/22px 22px,#eefafd}
 .hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);font-weight:300;color:var(--c)}
 .hero h1 strong{font-weight:800}
@@ -16,8 +16,10 @@ header::before{content:"";width:14px;height:14px;border-radius:50%;background:va
 footer{background:#0b3440;color:#bfe9f5;padding:1.4rem;text-align:center;font-size:.9rem}
 
 .photo{display:block;width:100%;object-fit:cover}
-.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
-html{scroll-behavior:smooth}
+.services div{display:grid!important;grid-template-columns:42% 1fr;column-gap:1rem;align-items:center;text-align:left}
+.services .photo{grid-column:1;grid-row:1/3;height:100%;min-height:130px;margin:0;border-radius:8px}
+.services h3{grid-column:2;align-self:end}
+.services p{grid-column:2;align-self:start}html{scroll-behavior:smooth}
 @keyframes rise{from{opacity:0;translate:0 24px}}
 @keyframes float{50%{translate:0 -4px}}
 .hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}

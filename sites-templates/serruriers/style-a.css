@@ -12,8 +12,7 @@ header{background:linear-gradient(180deg,#4b5563,var(--c));color:#fff;padding:1.
 footer{background:var(--c);color:#fff;padding:1.4rem;text-align:center;text-transform:uppercase;letter-spacing:.15em;font-weight:700}
 
 .photo{display:block;width:100%;object-fit:cover}
-.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
-html{scroll-behavior:smooth}
+.services .photo{height:260px;grid-column:1/-1;border-radius:4px;margin-bottom:1rem;object-position:center top}html{scroll-behavior:smooth}
 @keyframes rise{from{opacity:0;translate:0 24px}}
 @keyframes float{50%{translate:0 -4px}}
 .hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}

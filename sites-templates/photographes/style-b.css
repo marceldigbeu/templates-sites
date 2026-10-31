@@ -15,8 +15,7 @@ header{padding:1.2rem 2rem;border-bottom:2px double #3a2f1c;text-align:center;le
 footer{text-align:center;padding:1.6rem;border-top:2px double #3a2f1c;font-size:.8rem}
 
 .photo{display:block;width:100%;object-fit:cover}
-.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
-html{scroll-behavior:smooth}
+.services .photo{height:260px;grid-column:1/-1;border-radius:4px;margin-bottom:1rem;object-position:center top}html{scroll-behavior:smooth}
 @keyframes rise{from{opacity:0;translate:0 24px}}
 @keyframes float{50%{translate:0 -4px}}
 .hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}

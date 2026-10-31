@@ -13,8 +13,7 @@ header{background:#120e0b;padding:1.2rem 2.5rem;display:flex;justify-content:spa
 footer{padding:2rem;text-align:center;color:#6e5f4f;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin-top:2rem}
 
 .photo{display:block;width:100%;object-fit:cover}
-.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
-html{scroll-behavior:smooth}
+.services .photo{height:260px;grid-column:1/-1;border-radius:4px;margin-bottom:1rem;object-position:center top}html{scroll-behavior:smooth}
 @keyframes rise{from{opacity:0;translate:0 24px}}
 @keyframes float{50%{translate:0 -4px}}
 .hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}

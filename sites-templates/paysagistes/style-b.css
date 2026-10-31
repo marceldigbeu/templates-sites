@@ -15,8 +15,10 @@ footer{padding:1.6rem;text-align:center;color:#6f8c63;font-size:.8rem;letter-spa
 @media(max-width:700px){.services{grid-template-columns:1fr}}
 
 .photo{display:block;width:100%;object-fit:cover}
-.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
-html{scroll-behavior:smooth}
+.services div{position:relative;min-height:270px;overflow:hidden;display:flex!important;flex-direction:column;justify-content:flex-end;color:#fff}
+.services .photo{position:absolute;inset:0;width:100%;height:100%;margin:0;border-radius:0;z-index:0}
+.services div::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(0,0,0,.8));z-index:1}
+.services h3,.services p{position:relative;z-index:2;color:#fff}html{scroll-behavior:smooth}
 @keyframes rise{from{opacity:0;translate:0 24px}}
 @keyframes float{50%{translate:0 -4px}}
 .hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}

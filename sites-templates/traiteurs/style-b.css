@@ -15,8 +15,8 @@ header::after{content:"";display:block;width:60px;height:1px;background:var(--c2
 footer{text-align:center;padding:2rem;color:#999;letter-spacing:.2em;font-size:.8rem;text-transform:uppercase;border-top:1px solid #eee}
 
 .photo{display:block;width:100%;object-fit:cover}
-.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
-html{scroll-behavior:smooth}
+.services .photo{height:180px;grid-column:1/-1;border:8px solid #fff;border-bottom-width:22px;box-shadow:0 8px 18px rgba(0,0,0,.28);border-radius:2px;margin-bottom:1rem;rotate:-3deg}
+.services div:nth-child(even) .photo{rotate:3deg}html{scroll-behavior:smooth}
 @keyframes rise{from{opacity:0;translate:0 24px}}
 @keyframes float{50%{translate:0 -4px}}
 .hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}

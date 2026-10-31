@@ -17,8 +17,7 @@ footer{padding:1.6rem 3rem;font-size:.8rem;letter-spacing:.2em;text-transform:up
 @media(max-width:700px){.hero{grid-template-columns:1fr}.hero::after{display:none}.services{grid-template-columns:1fr}.services div{border-right:0;border-bottom:1px solid #2e2a24}}
 
 .photo{display:block;width:100%;object-fit:cover}
-.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
-html{scroll-behavior:smooth}
+.services .photo{height:210px;grid-column:1/-1;border-radius:999px 999px 10px 10px;margin-bottom:1rem}html{scroll-behavior:smooth}
 @keyframes rise{from{opacity:0;translate:0 24px}}
 @keyframes float{50%{translate:0 -4px}}
 .hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}
