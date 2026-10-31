@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le Bon Goût — Restaurant</title>
+  <meta name="description" content="Cuisine de saison, produits locaux. Réservez votre table en ligne.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" id="theme" href="themes/classique.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#accueil" class="logo">Le Bon Goût</a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav id="menu-nav">
+    <a href="#carte">La carte</a>
+    <a href="#apropos">Notre histoire</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#avis">Avis</a>
+    <a href="#contact">Contact</a>
+    <a href="#reservation" class="btn btn-small">Réserver</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ACCUEIL -->
+  <section class="hero" id="accueil">
+    <div class="hero-content">
+      <p class="eyebrow">Cuisine de saison · Produits locaux</p>
+      <h1>Le plaisir de bien manger, tout simplement.</h1>
+      <p class="lead">Une cuisine généreuse, préparée chaque jour avec des produits frais de nos producteurs.</p>
+      <div class="hero-actions">
+        <a href="#reservation" class="btn">Réserver une table</a>
+        <a href="#carte" class="btn btn-ghost">Voir la carte</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARTE -->
+  <section class="section" id="carte">
+    <h2>La carte</h2>
+    <p class="section-sub">Les plats changent avec les saisons. Prix en euros, service compris.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="entrees" role="tab">Entrées</button>
+      <button class="tab" data-tab="plats" role="tab">Plats</button>
+      <button class="tab" data-tab="desserts" role="tab">Desserts</button>
+      <button class="tab" data-tab="boissons" role="tab">Boissons</button>
+    </div>
+
+    <div class="panel active" id="entrees">
+      <article class="item"><div><h3>Velouté de saison</h3><p>Crème fraîche, croûtons maison</p></div><span class="price">9</span></article>
+      <article class="item"><div><h3>Salade de chèvre chaud</h3><p>Miel, noix, mesclun <em class="tag">Végétarien</em></p></div><span class="price">11</span></article>
+      <article class="item"><div><h3>Terrine de campagne</h3><p>Pain grillé, cornichons</p></div><span class="price">10</span></article>
+    </div>
+    <div class="panel" id="plats">
+      <article class="item"><div><h3>Magret de canard</h3><p>Sauce au miel, gratin dauphinois</p></div><span class="price">22</span></article>
+      <article class="item"><div><h3>Pavé de saumon</h3><p>Riz sauvage, beurre blanc</p></div><span class="price">21</span></article>
+      <article class="item"><div><h3>Risotto aux champignons</h3><p>Parmesan, huile de truffe <em class="tag">Végétarien</em></p></div><span class="price">18</span></article>
+      <article class="item"><div><h3>Burger du chef</h3><p>Bœuf local, cheddar, frites maison</p></div><span class="price">17</span></article>
+    </div>
+    <div class="panel" id="desserts">
+      <article class="item"><div><h3>Tarte tatin</h3><p>Crème d'Isigny</p></div><span class="price">8</span></article>
+      <article class="item"><div><h3>Fondant au chocolat</h3><p>Cœur coulant, glace vanille</p></div><span class="price">9</span></article>
+      <article class="item"><div><h3>Café gourmand</h3><p>Café et trois mignardises</p></div><span class="price">9</span></article>
+    </div>
+    <div class="panel" id="boissons">
+      <article class="item"><div><h3>Vin au verre</h3><p>Rouge, blanc ou rosé</p></div><span class="price">5</span></article>
+      <article class="item"><div><h3>Bière artisanale</h3><p>Pression 25 cl</p></div><span class="price">4,5</span></article>
+      <article class="item"><div><h3>Soft &amp; jus pressés</h3><p>Selon arrivage</p></div><span class="price">4</span></article>
+    </div>
+
+    <p class="note">Allergènes : demandez la liste complète à notre équipe.</p>
+  </section>
+
+  <!-- A PROPOS -->
+  <section class="section alt" id="apropos">
+    <div class="split">
+      <div class="img-box" role="img" aria-label="Le chef en cuisine">Photo du chef</div>
+      <div>
+        <h2>Notre histoire</h2>
+        <p>Depuis 2015, nous cuisinons avec passion des recettes simples et honnêtes. Chaque assiette raconte le travail de producteurs que nous connaissons par leur prénom.</p>
+        <p>Venez en famille, entre amis ou pour un repas d'affaires : une table vous attend.</p>
+        <ul class="stats">
+          <li><strong>10 ans</strong>d'expérience</li>
+          <li><strong>12</strong>producteurs locaux</li>
+          <li><strong>4,8/5</strong>note clients</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section class="section" id="galerie">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <div class="g g1">Plat 1</div><div class="g g2">Salle</div><div class="g g3">Plat 2</div>
+      <div class="g g4">Terrasse</div><div class="g g5">Dessert</div><div class="g g6">Bar</div>
+    </div>
+    <p class="note">Remplacez ces cases par vos photos (voir README).</p>
+  </section>
+
+  <!-- AVIS -->
+  <section class="section alt" id="avis">
+    <h2>Ils nous font confiance</h2>
+    <div class="reviews">
+      <blockquote>« Accueil chaleureux et plats délicieux. On revient chaque mois ! »<cite>— Sophie L.</cite></blockquote>
+      <blockquote>« Le magret est une merveille. Service rapide et souriant. »<cite>— Karim B.</cite></blockquote>
+      <blockquote>« Parfait pour notre repas de famille, merci à toute l'équipe. »<cite>— Marie D.</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- RESERVATION -->
+  <section class="section" id="reservation">
+    <h2>Réserver une table</h2>
+    <p class="section-sub">Réponse de confirmation sous 2 heures.</p>
+    <form id="resa" class="form" novalidate>
+      <label>Nom<input type="text" name="nom" required autocomplete="name"></label>
+      <label>Téléphone<input type="tel" name="tel" required autocomplete="tel"></label>
+      <label>Email<input type="email" name="email" autocomplete="email"></label>
+      <label>Date<input type="date" name="date" id="date" required></label>
+      <label>Heure
+        <select name="heure" required>
+          <option value="">Choisir</option>
+          <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option>
+          <option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option>
+        </select>
+      </label>
+      <label>Personnes<input type="number" name="personnes" min="1" max="12" value="2" required></label>
+      <label class="full">Remarque (allergies, anniversaire…)<textarea name="note" rows="3"></textarea></label>
+      <button type="submit" class="btn full">Envoyer la demande</button>
+      <p class="form-msg full" id="msg" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section alt" id="contact">
+    <h2>Nous trouver</h2>
+    <div class="split">
+      <div>
+        <h3>Adresse</h3>
+        <p>12 rue des Lilas<br>75000 Ville</p>
+        <h3>Téléphone</h3>
+        <p><a href="tel:+33100000000">01 00 00 00 00</a></p>
+        <h3>Horaires</h3>
+        <table class="hours">
+          <tr><td>Lundi</td><td>Fermé</td></tr>
+          <tr><td>Mardi – Jeudi</td><td>12h–14h · 19h–22h</td></tr>
+          <tr><td>Vendredi – Samedi</td><td>12h–14h · 19h–23h</td></tr>
+          <tr><td>Dimanche</td><td>12h–15h</td></tr>
+        </table>
+      </div>
+      <div class="img-box map" role="img" aria-label="Carte">
+        Intégrez ici Google Maps (iframe)
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Le Bon Goût · <a href="#">Mentions légales</a> · <a href="#">Instagram</a> · <a href="#">Facebook</a></p>
+</footer>
+
+<!-- DEMO : supprimer ce bloc en production, garder un seul thème dans le <link id="theme"> -->
+<select id="theme-switch" class="demo-switch" aria-label="Thème">
+  <option value="classique">Classique</option>
+  <option value="gastro">Gastronomique</option>
+  <option value="bistro">Bistro</option>
+  <option value="zen">Zen</option>
+</select>
+
+<script src="script.js"></script>
+</body>
+</html>

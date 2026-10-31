@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kebab Express — Snack · Sur place · Emporter · Livraison</title>
+  <meta name="description" content="Kebab, tacos, burgers. Commandez en 2 minutes, livraison rapide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="#accueil" class="logo">Kebab Express</a>
+  <nav id="menu-nav">
+    <a href="#formules">Formules</a>
+    <a href="#carte">Carte</a>
+    <a href="#infos">Infos</a>
+    <a href="tel:+33100000000" class="btn btn-small">📞 Appeler</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</header>
+
+<main>
+  <section class="hero" id="accueil">
+    <div class="hero-content">
+      <p class="eyebrow">Halal · Fait minute · 7j/7</p>
+      <h1>FAIM ? ON S'EN OCCUPE.</h1>
+      <p class="lead">Kebabs, tacos, burgers et frites croustillantes. Sur place, à emporter ou livré en 30 minutes.</p>
+      <div class="hero-actions">
+        <a href="#carte" class="btn">Commander</a>
+        <a href="#formules" class="btn btn-ghost">Voir les formules</a>
+      </div>
+      <ul class="badges">
+        <li>🥙 Viande halal</li><li>🛵 Livraison 30 min</li><li>🛍️ Click &amp; collect</li><li>⭐ 4,7/5</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FORMULES -->
+  <section class="section alt" id="formules">
+    <h2>Les formules</h2>
+    <p class="section-sub">Sandwich + frites + boisson. Le meilleur prix.</p>
+    <div class="cards">
+      <article class="card">
+        <span class="ribbon">Le + commandé</span>
+        <h3>Menu Kebab</h3>
+        <p>Kebab, frites, boisson 33 cl</p>
+        <div class="card-foot"><strong class="big">9,50 €</strong><button class="add" data-name="Menu Kebab" data-price="9.5">Ajouter</button></div>
+      </article>
+      <article class="card">
+        <h3>Menu Tacos</h3>
+        <p>Tacos M, frites, boisson 33 cl</p>
+        <div class="card-foot"><strong class="big">10,50 €</strong><button class="add" data-name="Menu Tacos" data-price="10.5">Ajouter</button></div>
+      </article>
+      <article class="card">
+        <h3>Menu Burger</h3>
+        <p>Burger au choix, frites, boisson</p>
+        <div class="card-foot"><strong class="big">10 €</strong><button class="add" data-name="Menu Burger" data-price="10">Ajouter</button></div>
+      </article>
+      <article class="card dark">
+        <h3>Menu Étudiant</h3>
+        <p>Kebab + boisson, sur présentation de la carte</p>
+        <div class="card-foot"><strong class="big">6,50 €</strong><button class="add" data-name="Menu Étudiant" data-price="6.5">Ajouter</button></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CARTE -->
+  <section class="section" id="carte">
+    <h2>La carte</h2>
+    <p class="section-sub">Touchez « + » pour composer votre commande.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="kebabs">Kebabs</button>
+      <button class="tab" data-tab="tacos">Tacos</button>
+      <button class="tab" data-tab="burgers">Burgers</button>
+      <button class="tab" data-tab="cotes">Accompagnements</button>
+      <button class="tab" data-tab="boissons">Boissons</button>
+    </div>
+
+    <div class="panel active" id="kebabs">
+      <article class="item"><div><h3>Kebab classique</h3><p>Viande, salade, tomate, oignon, sauce au choix</p></div><div class="buy"><span class="price">7</span><button class="add" data-name="Kebab classique" data-price="7" aria-label="Ajouter Kebab classique">+</button></div></article>
+      <article class="item"><div><h3>Kebab galette</h3><p>Galette, fromage fondu, frites dedans</p></div><div class="buy"><span class="price">8</span><button class="add" data-name="Kebab galette" data-price="8" aria-label="Ajouter Kebab galette">+</button></div></article>
+      <article class="item"><div><h3>Assiette kebab</h3><p>Viande, frites, salade, sauce</p></div><div class="buy"><span class="price">11</span><button class="add" data-name="Assiette kebab" data-price="11" aria-label="Ajouter Assiette kebab">+</button></div></article>
+      <article class="item"><div><h3>Kebab poulet</h3><p>Poulet mariné, crudités, sauce <em class="tag">Poulet</em></p></div><div class="buy"><span class="price">7,5</span><button class="add" data-name="Kebab poulet" data-price="7.5" aria-label="Ajouter Kebab poulet">+</button></div></article>
+    </div>
+    <div class="panel" id="tacos">
+      <article class="item"><div><h3>Tacos M</h3><p>1 viande, sauce fromagère, frites</p></div><div class="buy"><span class="price">8</span><button class="add" data-name="Tacos M" data-price="8" aria-label="Ajouter Tacos M">+</button></div></article>
+      <article class="item"><div><h3>Tacos L</h3><p>2 viandes, sauce fromagère, frites</p></div><div class="buy"><span class="price">10</span><button class="add" data-name="Tacos L" data-price="10" aria-label="Ajouter Tacos L">+</button></div></article>
+      <article class="item"><div><h3>Tacos XL</h3><p>3 viandes, double fromage, frites</p></div><div class="buy"><span class="price">12</span><button class="add" data-name="Tacos XL" data-price="12" aria-label="Ajouter Tacos XL">+</button></div></article>
+    </div>
+    <div class="panel" id="burgers">
+      <article class="item"><div><h3>Cheeseburger</h3><p>Steak, cheddar, cornichons, sauce</p></div><div class="buy"><span class="price">6,5</span><button class="add" data-name="Cheeseburger" data-price="6.5" aria-label="Ajouter Cheeseburger">+</button></div></article>
+      <article class="item"><div><h3>Double burger</h3><p>2 steaks, double cheddar, oignons</p></div><div class="buy"><span class="price">8,5</span><button class="add" data-name="Double burger" data-price="8.5" aria-label="Ajouter Double burger">+</button></div></article>
+      <article class="item"><div><h3>Chicken burger</h3><p>Poulet croustillant, salade, mayo</p></div><div class="buy"><span class="price">7,5</span><button class="add" data-name="Chicken burger" data-price="7.5" aria-label="Ajouter Chicken burger">+</button></div></article>
+    </div>
+    <div class="panel" id="cotes">
+      <article class="item"><div><h3>Frites</h3><p>Maison, croustillantes</p></div><div class="buy"><span class="price">3</span><button class="add" data-name="Frites" data-price="3" aria-label="Ajouter Frites">+</button></div></article>
+      <article class="item"><div><h3>Nuggets x6</h3><p>Sauce au choix</p></div><div class="buy"><span class="price">4,5</span><button class="add" data-name="Nuggets x6" data-price="4.5" aria-label="Ajouter Nuggets x6">+</button></div></article>
+      <article class="item"><div><h3>Onion rings</h3><p>Portion de 8</p></div><div class="buy"><span class="price">3,5</span><button class="add" data-name="Onion rings" data-price="3.5" aria-label="Ajouter Onion rings">+</button></div></article>
+    </div>
+    <div class="panel" id="boissons">
+      <article class="item"><div><h3>Canette 33 cl</h3><p>Coca, Fanta, Sprite, Ice Tea</p></div><div class="buy"><span class="price">2</span><button class="add" data-name="Canette 33 cl" data-price="2" aria-label="Ajouter Canette">+</button></div></article>
+      <article class="item"><div><h3>Bouteille 1,5 L</h3><p>À partager</p></div><div class="buy"><span class="price">3,5</span><button class="add" data-name="Bouteille 1,5 L" data-price="3.5" aria-label="Ajouter Bouteille 1,5 L">+</button></div></article>
+      <article class="item"><div><h3>Eau 50 cl</h3><p>Plate ou gazeuse</p></div><div class="buy"><span class="price">1,5</span><button class="add" data-name="Eau 50 cl" data-price="1.5" aria-label="Ajouter Eau">+</button></div></article>
+    </div>
+
+    <p class="note">Allergènes : demandez la liste complète à notre équipe.</p>
+  </section>
+
+  <!-- INFOS -->
+  <section class="section alt" id="infos">
+    <h2>Infos pratiques</h2>
+    <div class="split">
+      <div>
+        <h3>Adresse</h3>
+        <p>12 avenue de la République<br>75000 Ville</p>
+        <h3>Téléphone</h3>
+        <p><a href="tel:+33100000000">01 00 00 00 00</a></p>
+        <h3>Horaires</h3>
+        <table class="hours">
+          <tr><td>Lundi – Jeudi</td><td>11h – 00h</td></tr>
+          <tr><td>Vendredi – Samedi</td><td>11h – 02h</td></tr>
+          <tr><td>Dimanche</td><td>12h – 00h</td></tr>
+        </table>
+        <h3>Livraison</h3>
+        <p>Zone : 3 km · Minimum 12 € · Frais 2 € (offerts dès 25 €)</p>
+        <p class="platforms">Aussi sur <a href="#">Uber Eats</a> · <a href="#">Deliveroo</a></p>
+      </div>
+      <div class="img-box map" role="img" aria-label="Carte">Intégrez ici Google Maps (iframe)</div>
+    </div>
+  </section>
+</main>
+
+<!-- PANIER -->
+<button class="cart-fab" id="cart-open" aria-label="Ouvrir le panier">🛒 <span id="cart-count">0</span> · <span id="cart-total-fab">0,00 €</span></button>
+
+<aside class="cart" id="cart" aria-hidden="true">
+  <div class="cart-head"><h3>Ma commande</h3><button id="cart-close" aria-label="Fermer">✕</button></div>
+  <ul id="cart-list"></ul>
+  <p class="empty" id="cart-empty">Votre panier est vide.</p>
+  <div class="cart-opts">
+    <label><input type="radio" name="mode" value="Sur place" checked> Sur place</label>
+    <label><input type="radio" name="mode" value="À emporter"> À emporter</label>
+    <label><input type="radio" name="mode" value="Livraison"> Livraison</label>
+  </div>
+  <input type="text" id="c-nom" placeholder="Votre nom" autocomplete="name">
+  <input type="text" id="c-adr" placeholder="Adresse de livraison (si livraison)" autocomplete="street-address">
+  <textarea id="c-note" rows="2" placeholder="Sauces, sans oignon…"></textarea>
+  <div class="cart-total"><span>Total</span><strong id="cart-total">0,00 €</strong></div>
+  <button class="btn full-w" id="send">Envoyer sur WhatsApp</button>
+  <p class="form-msg" id="cart-msg" role="status" aria-live="polite"></p>
+</aside>
+
+<footer>
+  <p>© <span id="year"></span> Kebab Express · <a href="#">Mentions légales</a> · <a href="#">Instagram</a> · <a href="#">TikTok</a></p>
+</footer>
+
+<script src="order.js"></script>
+</body>
+</html>

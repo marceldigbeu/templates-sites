@@ -1,0 +1,13 @@
+/* Bistro / pizzeria : rustique, rouge tomate et crème */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Nunito:wght@400;600;700&display=swap');
+:root {
+  --bg: #fdf3e1; --bg-alt: #f7e4c3; --ink: #3b1f14; --muted: #7d5a48;
+  --accent: #d62828; --accent-dark: #a31d1d;
+  --surface: #fffaf0; --nav-bg: rgba(253,243,225,.96); --line: #d9b88a;
+  --ph: #e8c994; --ph2: #dcb878; --footer-bg: #3b1f14; --footer-ink: #f0d9b0;
+  --font-title: 'Abril Fatface', Georgia, serif; --font-body: 'Nunito', system-ui, sans-serif;
+  --radius: 16px; --btn-radius: 12px;
+}
+.item { border-bottom: 2px dotted var(--line); }
+.hero { background: linear-gradient(rgba(60,20,10,.55), rgba(60,20,10,.55)), url('../images/hero.jpg') center/cover, #5a2a18; }
+blockquote { border-left: 6px solid var(--accent); }

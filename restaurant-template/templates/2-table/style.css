@@ -1,0 +1,101 @@
+:root {
+  --bg: #0f0e0c;
+  --ink: #e9e3d6;
+  --dim: #8d8678;
+  --line: rgba(233,227,214,.18);
+  --red: #d4472b;
+  --serif: 'Bodoni Moda', 'Didot', Georgia, serif;
+  --mono: 'DM Mono', ui-monospace, Menlo, monospace;
+  --pad: clamp(1.2rem, 5vw, 4.5rem);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font: 400 1rem/1.7 var(--mono); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; text-underline-offset: 4px; }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+.cap { font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); }
+
+.top { position: absolute; inset: 0 0 auto 0; display: flex; justify-content: space-between; align-items: center; padding: 1.6rem var(--pad); z-index: 5; }
+.mark { font: italic 500 1.3rem var(--serif); text-decoration: none; }
+.mark i { display: inline-block; width: .42em; height: .42em; background: var(--red); border-radius: 50%; margin-left: .2em; }
+.link { font-size: .8rem; letter-spacing: .18em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
+.link:hover { color: var(--red); border-color: var(--red); }
+
+/* Hero : le nom déborde */
+.hero { min-height: 100svh; display: grid; align-content: end; padding: 0 var(--pad) 4rem; position: relative; overflow: hidden; }
+h1 { font: italic 400 clamp(6rem, 27vw, 24rem)/.8 var(--serif); letter-spacing: -.04em; margin-left: -.05em; white-space: nowrap; }
+.facts { margin-top: 2.5rem; font-size: clamp(.9rem, 1.6vw, 1.1rem); }
+.addr { position: absolute; right: var(--pad); top: 6rem; text-align: right; font-size: .75rem; letter-spacing: .12em; color: var(--dim); }
+
+/* Menu */
+section { padding: clamp(4rem, 10vw, 9rem) var(--pad); }
+.menu { max-width: 1200px; margin: 0 auto; }
+.courses { list-style: none; margin-top: 3rem; border-top: 1px solid var(--line); }
+.courses li { display: grid; grid-template-columns: clamp(5rem, 16vw, 13rem) 1fr; gap: 1rem; align-items: baseline; padding: 2.2rem 0; border-bottom: 1px solid var(--line); }
+.n { font: italic 400 clamp(3.4rem, 11vw, 9rem)/.9 var(--serif); color: transparent; -webkit-text-stroke: 1px var(--ink); }
+.courses h2 { font: 500 clamp(1.4rem, 3vw, 2.3rem)/1.15 var(--serif); }
+.courses p { color: var(--dim); margin-top: .6rem; max-width: 36em; font-size: .9rem; }
+.courses li:hover .n { color: var(--red); -webkit-text-stroke-color: var(--red); transition: color .3s, -webkit-text-stroke-color .3s; }
+
+.prices { margin: 3.5rem 0 0 clamp(5rem, 16vw, 13rem); max-width: 40rem; }
+.prices div { display: flex; gap: 1rem; align-items: baseline; padding: .7rem 0; border-bottom: 1px solid var(--line); }
+.prices dt { flex: 1; }
+.prices dd { font: 500 1.6rem var(--serif); }
+.note { margin: 1.5rem 0 0 clamp(5rem, 16vw, 13rem); color: var(--dim); font-size: .8rem; max-width: 40rem; }
+
+/* Cheffe */
+.chef { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+.photo { aspect-ratio: 3/4; background: var(--img) center/cover, #1b1916; }
+.quote { font: italic 400 clamp(1.4rem, 2.8vw, 2.2rem)/1.35 var(--serif); margin-top: 1.2rem; }
+.sign { margin-top: 1.5rem; color: var(--dim); font-size: .85rem; letter-spacing: .1em; }
+
+/* Réservation */
+.book { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--line); }
+.book h2 { font: italic 400 clamp(2.4rem, 7vw, 5.5rem)/1 var(--serif); margin: .6rem 0 3rem; }
+form { max-width: 52rem; display: grid; gap: 2.2rem; }
+fieldset { border: 0; }
+legend { font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--dim); margin-bottom: .9rem; }
+.days, .choices { display: flex; flex-wrap: wrap; gap: .6rem; }
+.choices input, .days input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.choices label span, .days label span { display: block; min-width: 3.4rem; padding: .7rem 1.1rem; border: 1px solid var(--line); cursor: pointer; text-align: center; transition: border-color .2s, background .2s; }
+.days label span { line-height: 1.25; }
+.days label b { display: block; font: 500 1.3rem var(--serif); }
+.days label small { font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+.choices label span:hover, .days label span:hover { border-color: var(--ink); }
+input:checked + span { background: var(--red); border-color: var(--red); color: #fff; }
+input:checked + span small { color: #fff; }
+input:focus-visible + span { outline: 2px solid var(--ink); outline-offset: 3px; }
+.fields { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.fields .wide { grid-column: 1 / -1; }
+.fields label { display: grid; gap: .3rem; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+.fields input { font: 400 1rem var(--mono); background: transparent; color: var(--ink); border: 0; border-bottom: 1px solid var(--dim); padding: .5rem 0; border-radius: 0; letter-spacing: 0; text-transform: none; }
+.fields input:focus { outline: none; border-color: var(--red); }
+.fields input.bad { border-color: var(--red); }
+.recap { font: italic 400 1.3rem var(--serif); border-left: 2px solid var(--red); padding-left: 1rem; }
+button[type=submit] { justify-self: start; font: 500 .85rem var(--mono); letter-spacing: .2em; text-transform: uppercase; background: var(--ink); color: var(--bg); border: 0; padding: 1.1rem 2.2rem; cursor: pointer; }
+button[type=submit]:hover { background: var(--red); color: #fff; }
+.hint { color: var(--dim); font-size: .8rem; }
+.msg { min-height: 1.4em; font-size: .9rem; }
+.msg.ok { color: #9ccf9a; } .msg.err { color: #ff9c85; }
+
+footer { border-top: 1px solid var(--line); padding: 2rem var(--pad) 3rem; font-size: .75rem; color: var(--dim); display: grid; gap: .4rem; }
+
+/* Mouvement : états initiaux posés seulement si les effets sont actifs (classe fx) */
+.fx .courses li, .fx .facts, .fx .addr, .fx h1 .l { opacity: 0; }
+.l { display: inline-block; will-change: transform, opacity, filter; }
+.courses { position: relative; }
+.rail { position: absolute; left: -.7rem; top: 0; bottom: 0; width: 2px; background: var(--red); transform-origin: top; transform: scaleY(0); }
+
+/* Curseur personnalisé */
+.cur { position: fixed; left: 0; top: 0; z-index: 100; pointer-events: none; opacity: 0; }
+.cur .dot { position: absolute; width: 12px; height: 12px; margin: -6px 0 0 -6px; border-radius: 50%; background: var(--red); }
+.cur .txt { position: absolute; transform: translate(-50%, -50%); font: 500 .62rem/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; opacity: 0; }
+.has-cursor, .has-cursor a, .has-cursor button, .has-cursor label, .has-cursor summary { cursor: none; }
+.has-cursor .fields input { cursor: text; }
+
+@media (max-width: 720px) {
+  .addr { position: static; text-align: left; margin-top: 1.5rem; }
+  .chef, .fields { grid-template-columns: 1fr; }
+  .prices, .note { margin-left: 0; }
+  .courses li { grid-template-columns: 4rem 1fr; }
+}

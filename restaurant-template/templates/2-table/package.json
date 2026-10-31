@@ -1,0 +1,9 @@
+{
+  "name": "sillage-effects",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/effects.js --bundle --minify --format=iife --outfile=effects.js"
+  },
+  "dependencies": { "motion": "^14.9.0" },
+  "devDependencies": { "esbuild": "^0.25.0" }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sillage — Menu en cinq temps, dix-huit couverts</title>
+  <meta name="description" content="Sillage, table à menu unique. Cinq temps, 78 €. Dix-huit couverts, du mercredi au samedi soir. Réservation en ligne.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){document.documentElement.classList.add("fx");setTimeout(function(){if(!window.__fx)document.documentElement.classList.remove("fx")},3000)}</script>
+</head>
+<body>
+
+<header class="top">
+  <a href="#" class="mark">Sillage<i aria-hidden="true"></i></a>
+  <a href="#reserver" class="link" data-cursor="Réserver">Réserver</a>
+</header>
+
+<main>
+  <!-- À PERSONNALISER : tous les textes sont des exemples -->
+  <section class="hero">
+    <h1 aria-label="Sillage"><span>Sillage</span></h1>
+    <p class="facts">Un menu en cinq temps.<br>Dix-huit couverts.<br>Du mercredi au samedi, le soir.</p>
+    <p class="addr">14 quai des Chalands<br>00000 La Ville</p>
+  </section>
+
+  <section class="menu" id="menu">
+    <p class="cap">Le menu · automne</p>
+    <ol class="courses">
+      <li><span class="n" aria-hidden="true">01</span><div><h2>Huître, pomme verte, raifort</h2><p>Huître de Marennes, eau de pomme clarifiée, raifort frais.</p></div></li>
+      <li><span class="n" aria-hidden="true">02</span><div><h2>Betterave cuite en croûte de sel</h2><p>Crème de brebis fumée, noisettes torréfiées, vinaigre de cidre.</p></div></li>
+      <li><span class="n" aria-hidden="true">03</span><div><h2>Lieu jaune, chou-fleur, beurre noisette</h2><p>Poisson de ligne du matin, cuit à l'unilatérale. Câpres, citron brûlé.</p></div></li>
+      <li><span class="n" aria-hidden="true">04</span><div><h2>Pigeon, céleri, jus de cuisson</h2><p>Pigeonneau rôti sur os, céleri-rave en deux textures, baies de genièvre.</p></div></li>
+      <li><span class="n" aria-hidden="true">05</span><div><h2>Poire, sarrasin, lait ribot</h2><p>Poire pochée au sirop de thym, croustillant de sarrasin, glace au lait ribot.</p></div></li>
+    </ol>
+
+    <dl class="prices">
+      <div><dt>Menu cinq temps</dt><dd>78 €</dd></div>
+      <div><dt>Accord mets &amp; vins, cinq verres</dt><dd>42 €</dd></div>
+      <div><dt>Version végétale, sur demande 48 h avant</dt><dd>68 €</dd></div>
+    </dl>
+    <p class="note">Le menu change avec les arrivages. Prix nets, service compris. Allergies et régimes : à signaler à la réservation.</p>
+  </section>
+
+  <section class="chef">
+    <div class="photo" style="--img:url('images/cheffe.jpg')" role="img" aria-label="Inès Barral, cheffe"></div>
+    <div>
+      <p class="cap">La cheffe</p>
+      <p class="quote">Je cuisine ce que les bateaux ramènent et ce que mes voisins cultivent. Le menu tient sur une carte parce que je ne sais pas mentir en cuisine. Venez avec de la place, on prend notre temps.</p>
+      <p class="sign">Inès Barral</p>
+    </div>
+  </section>
+
+  <section class="book" id="reserver">
+    <p class="cap">Réserver</p>
+    <h2>Choisissez une soirée.</h2>
+
+    <form id="resa" novalidate>
+      <fieldset>
+        <legend>1 · Le jour</legend>
+        <div class="days" id="days"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2 · Le service</legend>
+        <div class="choices">
+          <label><input type="radio" name="service" value="19 h 00" required><span>19 h 00</span></label>
+          <label><input type="radio" name="service" value="21 h 15" required><span>21 h 15</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3 · Les couverts</legend>
+        <div class="choices">
+          <label><input type="radio" name="couverts" value="1"><span>1</span></label>
+          <label><input type="radio" name="couverts" value="2" checked><span>2</span></label>
+          <label><input type="radio" name="couverts" value="3"><span>3</span></label>
+          <label><input type="radio" name="couverts" value="4"><span>4</span></label>
+          <label><input type="radio" name="couverts" value="5"><span>5</span></label>
+          <label><input type="radio" name="couverts" value="6"><span>6</span></label>
+        </div>
+        <p class="hint">Au-delà de six : écrivez-nous.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>4 · Vous</legend>
+        <div class="fields">
+          <label>Nom<input name="nom" required autocomplete="name"></label>
+          <label>Courriel<input name="email" type="email" required autocomplete="email"></label>
+          <label>Téléphone<input name="tel" type="tel" required autocomplete="tel"></label>
+          <label class="wide">Allergies, régime, occasion<input name="note"></label>
+        </div>
+      </fieldset>
+
+      <p class="recap" id="recap" aria-live="polite">Aucune soirée choisie.</p>
+      <button type="submit" data-cursor="Envoyer">Envoyer la demande</button>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      <p class="hint">Confirmation par courriel sous 24 h. Annulation gratuite jusqu'à 48 h avant.</p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>Sillage · 14 quai des Chalands, 00000 La Ville · <a href="mailto:bonjour@example.fr">bonjour@example.fr</a> · <a href="tel:+33100000000">01 00 00 00 00</a></p>
+  <p><a href="#">Mentions légales</a> · Liste des allergènes disponible sur demande.</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="effects.js" defer></script>
+</body>
+</html>

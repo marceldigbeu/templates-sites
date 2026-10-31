@@ -1,0 +1,72 @@
+/* Thème fast food / kebab : jaune, rouge, noir. Se charge après ../style.css */
+:root {
+  --bg: #fffdf5; --bg-alt: #fff3c4; --ink: #1a1a1a; --muted: #6b6250;
+  --accent: #e63312; --accent-dark: #b92509;
+  --surface: #ffffff; --nav-bg: rgba(255,214,0,.97); --line: #e6d9a8;
+  --ph: #f2dd85; --ph2: #e9cf63; --footer-bg: #1a1a1a; --footer-ink: #ffd600;
+  --font-title: 'Bebas Neue', Impact, sans-serif; --font-body: 'Poppins', system-ui, sans-serif;
+  --radius: 14px; --btn-radius: 10px;
+}
+h1, h2, h3 { letter-spacing: .02em; font-weight: 400; }
+h1 { font-size: clamp(3rem, 9vw, 6rem); }
+h2 { font-size: 3rem; }
+h3 { font-size: 1.4rem; }
+.logo { color: var(--ink); font-size: 1.8rem; }
+.nav nav a { color: var(--ink); font-weight: 600; }
+.nav nav a:hover { color: var(--accent-dark); }
+.nav .btn { background: var(--ink); }
+.nav .btn:hover { background: #000; }
+.burger span { background: var(--ink); }
+.hero { background: linear-gradient(rgba(20,10,0,.65), rgba(20,10,0,.65)), url('../images/hero-fastfood.jpg') center/cover, #3a1a0a; }
+.hero h1 { color: #ffd600; max-width: 12em; }
+.btn { text-transform: uppercase; letter-spacing: .05em; font-weight: 700; }
+.badges { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
+.badges li { background: rgba(255,255,255,.15); padding: .35rem .9rem; border-radius: 999px; font-size: .85rem; font-weight: 500; }
+.tab { border-color: var(--ink); color: var(--ink); }
+.tab.active, .tab:hover { background: var(--ink); color: #ffd600; }
+.price { font-size: 1.5rem; }
+
+/* Cartes formules */
+.cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin-top: 2rem; }
+.card { position: relative; background: var(--surface); border: 3px solid var(--ink); border-radius: var(--radius); padding: 1.4rem; display: flex; flex-direction: column; gap: .5rem; }
+.card p { color: var(--muted); font-size: .9rem; flex: 1; }
+.card.dark { background: var(--ink); color: #fff; }
+.card.dark p { color: #ccc; }
+.card-foot { display: flex; align-items: center; justify-content: space-between; margin-top: .6rem; }
+.big { font: 400 2rem var(--font-title); color: var(--accent); }
+.card.dark .big { color: #ffd600; }
+.ribbon { position: absolute; top: -14px; left: 14px; background: var(--accent); color: #fff; font-size: .75rem; font-weight: 700; padding: .2rem .7rem; border-radius: 999px; }
+
+/* Boutons ajouter */
+.add { background: var(--accent); color: #fff; border: 0; border-radius: 10px; font: 700 .9rem var(--font-body); padding: .5rem 1rem; cursor: pointer; }
+.add:hover { background: var(--accent-dark); }
+.item .add { width: 40px; height: 40px; padding: 0; font-size: 1.5rem; line-height: 1; border-radius: 50%; }
+.buy { display: flex; align-items: center; gap: 1rem; }
+.platforms a { color: var(--accent); font-weight: 600; }
+
+/* Panier flottant */
+.cart-fab { position: fixed; bottom: 1rem; left: 50%; transform: translateX(-50%); z-index: 15; background: var(--ink); color: #ffd600;
+  border: 0; border-radius: 999px; padding: .9rem 1.6rem; font: 700 1rem var(--font-body); cursor: pointer; box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+.cart-fab.bump { animation: bump .25s; }
+@keyframes bump { 50% { transform: translateX(-50%) scale(1.12); } }
+
+.cart { position: fixed; top: 0; right: 0; bottom: 0; width: min(400px, 100%); background: var(--surface); z-index: 30; padding: 1.2rem;
+  display: flex; flex-direction: column; gap: .7rem; box-shadow: -8px 0 30px rgba(0,0,0,.25); transform: translateX(105%); transition: transform .25s; overflow-y: auto; }
+.cart.open { transform: none; }
+.cart-head { display: flex; justify-content: space-between; align-items: center; }
+.cart-head button { background: none; border: 0; font-size: 1.4rem; cursor: pointer; color: var(--ink); }
+#cart-list { list-style: none; }
+#cart-list li { display: flex; align-items: center; gap: .5rem; padding: .5rem 0; border-bottom: 1px dashed var(--line); font-size: .92rem; }
+#cart-list .nm { flex: 1; }
+#cart-list button { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--ink); background: #fff; cursor: pointer; font-weight: 700; color: var(--ink); }
+.empty { color: var(--muted); text-align: center; padding: 1rem 0; }
+.cart-opts { display: flex; gap: .8rem; flex-wrap: wrap; font-size: .9rem; }
+.cart input[type=text], .cart textarea { font: inherit; padding: .6rem .7rem; border: 1px solid var(--line); border-radius: 8px; width: 100%; color: var(--ink); background: #fff; }
+.cart-total { display: flex; justify-content: space-between; font-size: 1.2rem; padding-top: .4rem; }
+.full-w { width: 100%; text-align: center; }
+.form-msg { text-align: center; font-weight: 500; font-size: .9rem; }
+.form-msg.err { color: var(--accent); }
+.form-msg.ok { color: #2f7a1c; }
+
+@media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .cards { grid-template-columns: 1fr; } h2 { font-size: 2.4rem; } }

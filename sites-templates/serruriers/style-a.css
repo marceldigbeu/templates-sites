@@ -1,0 +1,27 @@
+:root{--c:#64748B;--c2:#F59E0B}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Arial Narrow',Arial,sans-serif;background:#dfe3e8;color:#1c2128}
+header{background:linear-gradient(180deg,#4b5563,var(--c));color:#fff;padding:1.2rem 2rem;text-transform:uppercase;letter-spacing:.2em;font-weight:700;border-bottom:6px solid var(--c2)}
+.hero{padding:5rem 2rem;background:repeating-linear-gradient(135deg,#e7eaee 0 18px,#dfe3e8 18px 36px)}
+.hero h1{font-size:clamp(2.4rem,6.5vw,4.6rem);text-transform:uppercase;font-weight:900;line-height:.95;max-width:13ch}
+.hero p{margin:1.2rem 0 2rem;background:var(--c);color:#fff;display:inline-block;padding:.4rem 1rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.btn{display:block;width:max-content;background:var(--c2);color:#1c2128;padding:1rem 2.4rem;text-decoration:none;font-weight:900;text-transform:uppercase;border-radius:2px;box-shadow:0 5px 0 #8a5a00}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:2.5rem 2rem}
+.services div{background:#fff;padding:1.6rem;border-radius:2px;border-top:8px solid var(--c);box-shadow:0 3px 0 #b6bcc4}
+.services h3{text-transform:uppercase;margin-bottom:.4rem}
+footer{background:var(--c);color:#fff;padding:1.4rem;text-align:center;text-transform:uppercase;letter-spacing:.15em;font-weight:700}
+
+.photo{display:block;width:100%;object-fit:cover}
+.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
+html{scroll-behavior:smooth}
+@keyframes rise{from{opacity:0;translate:0 24px}}
+@keyframes float{50%{translate:0 -4px}}
+.hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}
+.hero p{animation-delay:.15s}
+.hero .btn{animation:rise .8s .3s ease-out both,float 3s 1.2s ease-in-out infinite}
+.services div:nth-child(2){animation-delay:.12s}
+.services div:nth-child(3){animation-delay:.24s}
+@supports (animation-timeline:view()){.services div:nth-child(n){animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}}
+.services .photo{transition:filter .4s}
+.services div:hover .photo{filter:saturate(1.35) brightness(1.05)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

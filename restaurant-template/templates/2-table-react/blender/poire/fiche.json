@@ -1,0 +1,352 @@
+{
+  "nom": "Sillage 05 · Poire, sarrasin, lait ribot",
+  "note": "Cotes en mètres. Assiette 27 cm (supposé), poire pochée 9,5 cm (supposé). À PERSONNALISER selon le vrai dressage.",
+  "camera": {
+    "loc": [
+      0,
+      -0.55,
+      0.32
+    ],
+    "cible": [
+      0,
+      0,
+      0.03
+    ],
+    "lens": 70
+  },
+  "rendu": {
+    "taille": [
+      900,
+      700
+    ],
+    "echantillons": 96,
+    "net_sur": "Poire",
+    "ouverture": 5.6
+  },
+  "lumiere": {
+    "fond": "#0f0e0c",
+    "fond_force": 0.08,
+    "softbox": [
+      {
+        "pos": [
+          -0.45,
+          0.35,
+          0.5
+        ],
+        "taille": 0.6,
+        "energie": 22
+      },
+      {
+        "pos": [
+          0.3,
+          0.5,
+          0.22
+        ],
+        "taille": 0.3,
+        "energie": 9
+      }
+    ]
+  },
+  "pieces": [
+    {
+      "nom": "Table",
+      "forme": "boite",
+      "cotes": [
+        0.9,
+        0.7,
+        0.03
+      ],
+      "pos": [
+        0,
+        0,
+        -0.03
+      ],
+      "fin": {
+        "biseau": 0.004
+      },
+      "matiere": {
+        "recette": "bois",
+        "color": "#2a1d14"
+      }
+    },
+    {
+      "nom": "Assiette",
+      "forme": "tour",
+      "cotes": [
+        0.27,
+        0.27,
+        0.024
+      ],
+      "sur": "Table",
+      "profil": [
+        [
+          0,
+          0
+        ],
+        [
+          0.09,
+          0
+        ],
+        [
+          0.11,
+          0.004
+        ],
+        [
+          0.13,
+          0.016
+        ],
+        [
+          0.135,
+          0.022
+        ],
+        [
+          0.132,
+          0.024
+        ],
+        [
+          0.11,
+          0.009
+        ],
+        [
+          0.09,
+          0.006
+        ],
+        [
+          0,
+          0.006
+        ]
+      ],
+      "matiere": {
+        "recette": "gres"
+      }
+    },
+    {
+      "nom": "Sirop",
+      "forme": "disque",
+      "cotes": [
+        0.15,
+        0.12,
+        0.0015
+      ],
+      "pos": [
+        0.005,
+        0,
+        0
+      ],
+      "sur": "Assiette",
+      "ignore_chevauchement": true,
+      "matiere": {
+        "recette": "sirop"
+      }
+    },
+    {
+      "nom": "Poire",
+      "forme": "tour",
+      "cotes": [
+        0.068,
+        0.068,
+        0.095
+      ],
+      "pos": [
+        -0.025,
+        0.012,
+        0
+      ],
+      "rot": [
+        0,
+        8,
+        0
+      ],
+      "sur": "Assiette",
+      "profil": [
+        [
+          0,
+          0
+        ],
+        [
+          0.022,
+          0.002
+        ],
+        [
+          0.033,
+          0.018
+        ],
+        [
+          0.034,
+          0.032
+        ],
+        [
+          0.028,
+          0.05
+        ],
+        [
+          0.019,
+          0.065
+        ],
+        [
+          0.015,
+          0.078
+        ],
+        [
+          0.011,
+          0.09
+        ],
+        [
+          0,
+          0.095
+        ]
+      ],
+      "fin": {
+        "bosse": 0.0006,
+        "grain": 0.01
+      },
+      "matiere": {
+        "recette": "fruit_poche",
+        "subsurface_radius": [
+          1.0,
+          0.8,
+          0.4
+        ],
+        "subsurface_scale": 0.004
+      }
+    },
+    {
+      "nom": "Tige",
+      "forme": "cylindre",
+      "cotes": [
+        0.003,
+        0.003,
+        0.018
+      ],
+      "pos": [
+        -0.019,
+        0.012,
+        0
+      ],
+      "rot": [
+        0,
+        14,
+        0
+      ],
+      "sur": "Poire",
+      "ignore_chevauchement": true,
+      "matiere": {
+        "recette": "bois",
+        "color": "#4a3522",
+        "rough": 0.8
+      }
+    },
+    {
+      "nom": "Glace",
+      "forme": "sphere",
+      "cotes": [
+        0.055,
+        0.032,
+        0.028
+      ],
+      "pos": [
+        0.055,
+        -0.035,
+        0
+      ],
+      "rot": [
+        0,
+        0,
+        30
+      ],
+      "sur": "Assiette",
+      "fin": {
+        "lisse": 1,
+        "bosse": 0.0004,
+        "grain": 0.006
+      },
+      "matiere": {
+        "recette": "creme"
+      }
+    },
+    {
+      "nom": "Tuile1",
+      "forme": "boite",
+      "cotes": [
+        0.055,
+        0.022,
+        0.0018
+      ],
+      "pos": [
+        0.035,
+        0.045,
+        0.004
+      ],
+      "rot": [
+        6,
+        -14,
+        25
+      ],
+      "sur": "Assiette",
+      "ignore_chevauchement": true,
+      "fin": {
+        "bosse": 0.0008,
+        "grain": 0.008
+      },
+      "matiere": {
+        "recette": "croustillant"
+      }
+    },
+    {
+      "nom": "Tuile2",
+      "forme": "boite",
+      "cotes": [
+        0.048,
+        0.02,
+        0.0018
+      ],
+      "pos": [
+        0.07,
+        0.01,
+        0.006
+      ],
+      "rot": [
+        -10,
+        18,
+        100
+      ],
+      "sur": "Assiette",
+      "ignore_chevauchement": true,
+      "fin": {
+        "bosse": 0.0008,
+        "grain": 0.008
+      },
+      "matiere": {
+        "recette": "croustillant"
+      }
+    },
+    {
+      "nom": "Tuile3",
+      "forme": "boite",
+      "cotes": [
+        0.04,
+        0.018,
+        0.0018
+      ],
+      "pos": [
+        -0.07,
+        -0.045,
+        0.003
+      ],
+      "rot": [
+        4,
+        8,
+        -35
+      ],
+      "sur": "Assiette",
+      "ignore_chevauchement": true,
+      "fin": {
+        "bosse": 0.0008,
+        "grain": 0.008
+      },
+      "matiere": {
+        "recette": "croustillant"
+      }
+    }
+  ]
+}

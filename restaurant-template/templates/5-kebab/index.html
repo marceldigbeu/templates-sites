@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anatolie Grill — Kebab halal, commande en ligne</title>
+  <meta name="description" content="Kebab halal, pain cuit à la commande. Sur place, à emporter ou livré dans 3 km. Commandez en une minute.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a href="#" class="logo">Anatolie<span>Grill</span></a>
+  <p class="status" id="status" aria-live="polite"></p>
+  <button class="cart-btn" id="open-cart" type="button">Panier <b id="cart-count">0</b></button>
+</header>
+
+<main>
+  <!-- À PERSONNALISER : noms, prix et textes d'exemple. Les prix se règlent dans script.js (MENU). -->
+  <section class="hero" style="--img:url('images/broche.jpg')">
+    <h1>Commandé<br>en une <em>minute.</em></h1>
+    <ul class="facts">
+      <li><b>Halal</b> viande d'agneau-veau et de poulet</li>
+      <li><b>Pain cuit</b> à la commande</li>
+      <li><b>30 min</b> en moyenne, livraison 3 km</li>
+    </ul>
+  </section>
+
+  <nav class="cats" id="cats" aria-label="Catégories"></nav>
+
+  <div class="layout">
+    <div id="menu"></div>
+
+    <aside class="cart" id="cart" aria-label="Panier">
+      <div class="cart-head"><h2>Ma commande</h2><button type="button" id="close-cart" class="x" aria-label="Fermer le panier">Fermer</button></div>
+      <ul id="lines"></ul>
+      <p class="empty" id="empty">Rien pour l'instant. Choisissez un plat à gauche.</p>
+
+      <fieldset class="modes">
+        <legend>Comment ?</legend>
+        <label><input type="radio" name="mode" value="Sur place" checked><span>Sur place</span></label>
+        <label><input type="radio" name="mode" value="À emporter"><span>À emporter</span></label>
+        <label><input type="radio" name="mode" value="Livraison"><span>Livraison</span></label>
+      </fieldset>
+
+      <div class="fields">
+        <label>Prénom<input id="f-nom" autocomplete="given-name"></label>
+        <label>Téléphone<input id="f-tel" type="tel" autocomplete="tel"></label>
+        <label id="adr-wrap" hidden>Adresse de livraison<input id="f-adr" autocomplete="street-address"></label>
+        <label>Note<input id="f-note" placeholder="Ex : bien cuit, sans piment"></label>
+      </div>
+
+      <dl class="sum">
+        <div><dt>Sous-total</dt><dd id="s-sub">0,00 €</dd></div>
+        <div id="s-fee-row" hidden><dt>Livraison</dt><dd id="s-fee">0,00 €</dd></div>
+        <div class="tot"><dt>Total</dt><dd id="s-tot">0,00 €</dd></div>
+      </dl>
+      <p class="hint" id="hint"></p>
+      <button type="button" class="send" id="send">Envoyer sur WhatsApp</button>
+      <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      <p class="hint">Paiement à la remise, en carte ou espèces.</p>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <p><b>Anatolie Grill</b> · 5 avenue Jean-Jaurès, 00000 La Ville · <a href="tel:+33100000000">01 00 00 00 00</a></p>
+  <p>Tous les jours 11 h – 1 h (2 h vendredi et samedi). Livraison dans 3 km, minimum 15 €, 2 € de frais, offerts dès 25 €.</p>
+  <p>Allergènes (gluten, lait, sésame, moutarde, œuf) : demandez la liste au comptoir. <a href="#">Mentions légales</a></p>
+</footer>
+
+<button class="bar" id="bar" type="button">Voir le panier · <span id="bar-tot">0,00 €</span></button>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <form method="dialog" id="dlg-form">
+    <h3 id="dlg-title"></h3>
+    <p class="dlg-base" id="dlg-base"></p>
+    <div id="dlg-body"></div>
+    <div class="dlg-foot">
+      <button type="button" class="ghost" id="dlg-cancel">Annuler</button>
+      <button type="submit" class="add" id="dlg-ok">Ajouter · 0,00 €</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>

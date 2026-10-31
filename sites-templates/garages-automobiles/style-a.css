@@ -1,0 +1,28 @@
+:root{--c:#DC2626;--c2:#FACC15}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Arial Black',Arial,sans-serif;background:#111;color:#fff}
+header{background:var(--c);color:#fff;padding:1.2rem 2rem;font-style:italic;font-size:1.3rem;text-transform:uppercase;clip-path:polygon(0 0,100% 0,96% 100%,0 100%)}
+.hero{padding:6rem 2rem 5rem;background:linear-gradient(160deg,#111 55%,var(--c) 55%);}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);font-style:italic;text-transform:uppercase;line-height:.9;max-width:12ch}
+.hero p{margin:1.4rem 0 2.2rem;color:var(--c2);font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+.btn{background:var(--c2);color:#111;padding:1rem 2.4rem;text-decoration:none;font-style:italic;text-transform:uppercase;transform:skewX(-10deg);display:inline-block}
+.services{display:flex;flex-wrap:wrap;gap:1rem;padding:3rem 2rem;background:#1b1b1b}
+.services div{flex:1 1 200px;padding:1.6rem;background:#222;border-left:6px solid var(--c);transform:skewX(-4deg)}
+.services h3{font-style:italic;text-transform:uppercase;color:var(--c2);margin-bottom:.4rem}
+.services p{color:#aaa;font-family:Arial,sans-serif}
+footer{background:var(--c);color:#fff;padding:1.4rem;text-align:center;font-style:italic;text-transform:uppercase}
+
+.photo{display:block;width:100%;object-fit:cover}
+.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
+html{scroll-behavior:smooth}
+@keyframes rise{from{opacity:0;translate:0 24px}}
+@keyframes float{50%{translate:0 -4px}}
+.hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}
+.hero p{animation-delay:.15s}
+.hero .btn{animation:rise .8s .3s ease-out both,float 3s 1.2s ease-in-out infinite}
+.services div:nth-child(2){animation-delay:.12s}
+.services div:nth-child(3){animation-delay:.24s}
+@supports (animation-timeline:view()){.services div:nth-child(n){animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}}
+.services .photo{transition:filter .4s}
+.services div:hover .photo{filter:saturate(1.35) brightness(1.05)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

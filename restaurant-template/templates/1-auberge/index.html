@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auberge du Marronnier — Cuisine du marché, menu du midi 18,50 €</title>
+  <meta name="description" content="Auberge de village. Plat du jour à l'ardoise, produits à moins de 30 km. Menu du midi 18,50 €. Réservation par téléphone.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="name" href="#haut">Auberge du Marronnier</a>
+  <p class="status" id="status" aria-live="polite"></p>
+  <a class="tel" href="tel:+33100000000">01 00 00 00 00</a>
+</header>
+
+<main id="haut">
+  <!-- À PERSONNALISER : tout le texte est un exemple réaliste, à remplacer par celui du client -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Ici on cuisine ce qu'il y a au marché le matin.</h1>
+      <p>Pas de carte de quarante plats. Une ardoise qui change, une carte courte, et un patron qui connaît le nom de l'éleveur.</p>
+      <p class="cta-line"><a href="#venir">Réserver une table</a> <span>ou appelez le <a href="tel:+33100000000">01 00 00 00 00</a></span></p>
+    </div>
+
+    <aside class="slate" aria-label="Ardoise du jour">
+      <p class="slate-date" id="slate-date"></p>
+      <h2>L'ardoise</h2>
+      <ul>
+        <li><span>Œuf mayonnaise, cresson</span></li>
+        <li><span>Blanquette de veau, riz</span></li>
+        <li><span>Riz au lait, caramel beurre salé</span></li>
+      </ul>
+      <p class="slate-price">Menu du midi <strong>18,50 €</strong><br><small>entrée + plat, ou plat + dessert · du mardi au vendredi</small></p>
+    </aside>
+  </section>
+
+  <section class="carte" id="carte">
+    <h2 class="sect">La carte</h2>
+    <p class="legend">V : végétarien · S : sans gluten · Prix nets, service compris.</p>
+
+    <div class="cols">
+      <div>
+        <h3>Pour commencer</h3>
+        <ul class="menu">
+          <li><span class="d">Soupe de légumes du moment</span><span class="p">8,50</span></li>
+          <li><span class="d">Terrine de campagne, cornichons <em>S</em></span><span class="p">9,00</span></li>
+          <li><span class="d">Œufs mayonnaise, cresson <em>V</em></span><span class="p">7,50</span></li>
+          <li><span class="d">Salade de chèvre chaud, miel de la ruche d'à côté <em>V</em></span><span class="p">11,00</span></li>
+          <li><span class="d">Escargots de Bourgogne, la douzaine</span><span class="p">13,50</span></li>
+        </ul>
+
+        <h3>Pour finir</h3>
+        <ul class="menu">
+          <li><span class="d">Riz au lait, caramel beurre salé <em>V S</em></span><span class="p">6,50</span></li>
+          <li><span class="d">Tarte aux pommes tiède, crème crue <em>V</em></span><span class="p">7,50</span></li>
+          <li><span class="d">Île flottante <em>V S</em></span><span class="p">7,00</span></li>
+          <li><span class="d">Assiette de fromages affinés</span><span class="p">9,00</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Les plats</h3>
+        <ul class="menu">
+          <li><span class="d">Blanquette de veau, riz <em>S</em></span><span class="p">19,00</span></li>
+          <li><span class="d">Andouillette AAAAA, moutarde à l'ancienne, frites</span><span class="p">18,00</span></li>
+          <li><span class="d">Magret de canard, sauce au miel, gratin</span><span class="p">23,00</span></li>
+          <li><span class="d">Pavé de lieu jaune, beurre blanc, poireaux <em>S</em></span><span class="p">21,00</span></li>
+          <li><span class="d">Entrecôte de la ferme Lenoir, frites, 300 g</span><span class="p">26,00</span></li>
+          <li><span class="d">Gratin de légumes d'hiver, œuf poché <em>V</em></span><span class="p">15,50</span></li>
+        </ul>
+
+        <h3>Le dimanche seulement</h3>
+        <ul class="menu">
+          <li><span class="d">Gigot d'agneau, flageolets <em>S</em></span><span class="p">24,00</span></li>
+        </ul>
+        <p class="small">Enfants jusqu'à 10 ans : un plat + un dessert, 11 €.<br>Une allergie ? Dites-le au moment de commander, on adapte ce qu'on peut.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="maison">
+    <div>
+      <h2 class="sect">La maison</h2>
+      <p>La salle est celle de l'ancienne épicerie du village. Le zinc est d'origine. Le marronnier, en terrasse, a quatre-vingts ans et donne de l'ombre de mai à septembre.</p>
+      <p>Le bœuf vient de la ferme Lenoir, à 14 km. Les légumes, du maraîcher de la route de Marcilly. Le pain, on le prend chez Gaston, à 200 mètres, le matin à six heures.</p>
+    </div>
+    <div class="photo" style="--img:url('images/salle.jpg')" role="img" aria-label="La salle de l'auberge"></div>
+  </section>
+
+  <section class="venir" id="venir">
+    <h2 class="sect">Venir, réserver</h2>
+    <div class="venir-grid">
+      <div>
+        <p class="big-tel">Pour réserver, le plus simple : <a href="tel:+33100000000">01 00 00 00 00</a></p>
+        <p>Nous répondons de 10 h à 11 h 30 et de 15 h à 18 h. Hors de ces heures, laissez un message ou écrivez-nous ci-dessous : nous rappelons.</p>
+        <address>Auberge du Marronnier<br>3 place de l'Église<br>00000 Le Village<br><small>Parking gratuit derrière l'église.</small></address>
+
+        <table class="hours" id="hours">
+          <caption>Horaires</caption>
+          <tr data-d="1"><th>Lundi</th><td>Fermé</td></tr>
+          <tr data-d="2"><th>Mardi</th><td>12 h – 14 h 30</td></tr>
+          <tr data-d="3"><th>Mercredi</th><td>12 h – 14 h 30 · 19 h – 21 h 30</td></tr>
+          <tr data-d="4"><th>Jeudi</th><td>12 h – 14 h 30 · 19 h – 21 h 30</td></tr>
+          <tr data-d="5"><th>Vendredi</th><td>12 h – 14 h 30 · 19 h – 22 h</td></tr>
+          <tr data-d="6"><th>Samedi</th><td>19 h – 22 h</td></tr>
+          <tr data-d="0"><th>Dimanche</th><td>12 h – 15 h</td></tr>
+        </table>
+      </div>
+
+      <form id="resa" class="form" novalidate>
+        <p class="form-title">Ou laissez-nous un mot</p>
+        <label>Nom<input name="nom" required autocomplete="name"></label>
+        <label>Téléphone<input name="tel" type="tel" required autocomplete="tel"></label>
+        <div class="row">
+          <label>Jour<input name="date" type="date" id="date" required></label>
+          <label>Service
+            <select name="service" required>
+              <option value="">—</option><option>Midi</option><option>Soir</option>
+            </select>
+          </label>
+          <label>Couverts<input name="couverts" type="number" min="1" max="14" value="2" required></label>
+        </div>
+        <label>Précisions<textarea name="note" rows="3" placeholder="Allergie, chaise haute, anniversaire…"></textarea></label>
+        <button type="submit">Envoyer</button>
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Auberge du Marronnier · 3 place de l'Église, 00000 Le Village · SIRET 000 000 000 00000</p>
+  <p><a href="#">Mentions légales</a> · Alcool : à consommer avec modération.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

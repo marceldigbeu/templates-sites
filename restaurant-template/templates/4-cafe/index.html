@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Graine — Café torréfié sur place, brunch du mardi au dimanche</title>
+  <meta name="description" content="Café torréfié sur place, brunch et goûter. Lait végétal sans supplément, chiens acceptés. Ouvert du mardi au dimanche, 8 h–18 h.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hanken+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a href="#" class="logo">graine<i aria-hidden="true"></i></a>
+  <p class="status" id="status" aria-live="polite"></p>
+</header>
+
+<main>
+  <!-- À PERSONNALISER : textes, produits et prix d'exemple -->
+  <section class="hero">
+    <h1><span>On torréfie le café ici,</span> <span class="b">le reste suit.</span></h1>
+    <p class="sub">Café de spécialité torréfié à l'arrière de la salle, pain de la boulangerie d'en face, brunch jusqu'à 14 h. Le lait végétal ne coûte pas plus cher que l'autre.</p>
+    <div class="sticker" aria-live="polite"><small>Servi maintenant</small><b id="now">…</b></div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="menu-head">
+      <h2>Le menu</h2>
+      <fieldset class="filter">
+        <legend>Je mange</legend>
+        <label><input type="radio" name="diet" value="all" checked><span>Tout</span></label>
+        <label><input type="radio" name="diet" value="V"><span>Végétarien</span></label>
+        <label><input type="radio" name="diet" value="VG"><span>Vegan</span></label>
+        <label><input type="radio" name="diet" value="SG"><span>Sans gluten</span></label>
+      </fieldset>
+    </div>
+    <p class="legend">V végétarien · VG vegan · SG sans gluten. Une allergie ? Dites-le au comptoir.</p>
+
+    <div class="pages" id="pages"></div>
+
+    <div class="drinks">
+      <h3>Boissons, toute la journée</h3>
+      <ul id="drinks"></ul>
+      <p class="small">Lait d'avoine, de soja ou d'amande : même prix que le lait de vache.</p>
+    </div>
+  </section>
+
+  <section class="coffee">
+    <div class="photo" style="--img:url('images/cafe.jpg')" role="img" aria-label="Le torréfacteur en action"></div>
+    <div>
+      <h2>Le café</h2>
+      <p>On torréfie deux fois par semaine, le mardi et le vendredi, en petits lots de 12 kg. Le café du moment vient d'une coopérative de Huehuetenango, au Guatemala : notes de cacao, de pomme cuite, peu d'acidité.</p>
+      <p>Les paquets sont datés du jour de torréfaction. On vous dit de les ouvrir entre le 5<sup>e</sup> et le 30<sup>e</sup> jour, pas avant.</p>
+    </div>
+  </section>
+
+  <section class="info">
+    <h2>Pratique</h2>
+    <div class="info-grid">
+      <div>
+        <h3>Horaires</h3>
+        <table id="hours">
+          <tr data-d="1"><th>Lundi</th><td>fermé</td></tr>
+          <tr data-d="2"><th>Mardi – vendredi</th><td>8 h – 18 h</td></tr>
+          <tr data-d="6"><th>Samedi</th><td>8 h – 18 h</td></tr>
+          <tr data-d="0"><th>Dimanche</th><td>9 h – 17 h</td></tr>
+        </table>
+      </div>
+      <div>
+        <h3>Adresse</h3>
+        <p>21 rue du Four<br>00000 La Ville<br><a href="mailto:bonjour@example.fr">bonjour@example.fr</a></p>
+      </div>
+      <div>
+        <h3>Les règles</h3>
+        <ul class="rules">
+          <li>Les chiens sont les bienvenus, en laisse.</li>
+          <li>Ordinateurs bienvenus, sauf samedi et dimanche de 11 h à 14 h.</li>
+          <li>Pas de réservation, sauf à partir de 6 personnes : écrivez-nous.</li>
+          <li>Paiement par carte ou espèces. Pas de chèques.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><p>Graine · 21 rue du Four · <a href="#">Mentions légales</a></p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>

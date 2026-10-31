@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chez Tonio — Pizzeria napolitaine, four à bois 450 °C</title>
+  <meta name="description" content="Pizzas napolitaines cuites 90 secondes au four à bois. Pâte 48 h. Sur place et à emporter, pas de livraison.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo:wght@400;500;700&family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="split">
+
+  <!-- À PERSONNALISER : textes et prix d'exemple -->
+  <aside class="side">
+    <div>
+      <p class="kicker">Pizzeria napolitaine</p>
+      <h1>Chez<br>Tonio</h1>
+      <p class="fact"><span>450&nbsp;°C.</span><span>90&nbsp;secondes.</span></p>
+      <p class="lead">Four à bois, pâte de 48 heures, fior di latte livré le mardi et le vendredi. C'est tout le secret. Et un four qu'on ne laisse jamais s'éteindre.</p>
+    </div>
+
+    <div class="info">
+      <p class="status" id="status" aria-live="polite"></p>
+      <ul class="hours">
+        <li><span>Mar – Jeu</span><span>18 h – 22 h</span></li>
+        <li><span>Ven – Sam</span><span>12 h – 14 h · 18 h – 23 h</span></li>
+        <li><span>Dim</span><span>18 h – 22 h</span></li>
+        <li><span>Lundi</span><span>fermé</span></li>
+      </ul>
+      <a class="tel" href="tel:+33100000000">01 00 00 00 00</a>
+      <p class="addr">8 rue des Tanneurs, 00000 La Ville</p>
+    </div>
+  </aside>
+
+  <main class="board">
+    <div class="gingham" aria-hidden="true" style="--img:url('images/four.jpg')"></div>
+
+    <section>
+      <header class="head"><h2>Les rosse</h2><p>Base tomate San Marzano</p><span class="sizes" aria-hidden="true"><b>26</b><b>33</b></span></header>
+      <ul class="pizzas">
+        <li><div><h3>Marinara</h3><p>Tomate, ail, origan, huile d'olive</p></div><span class="pr" aria-label="26 cm : 9 euros">9</span><span class="pr" aria-label="33 cm : 11 euros">11</span></li>
+        <li><div><h3>Margherita</h3><p>Tomate, fior di latte, basilic</p></div><span class="pr">10</span><span class="pr">13</span></li>
+        <li><div><h3>Diavola</h3><p>Tomate, fior di latte, salami piquant, piment</p></div><span class="pr">12</span><span class="pr">15</span></li>
+        <li><div><h3>Prosciutto</h3><p>Tomate, fior di latte, jambon blanc, champignons</p></div><span class="pr">12</span><span class="pr">15</span></li>
+        <li><div><h3>Napoli</h3><p>Tomate, fior di latte, anchois, câpres, olives</p></div><span class="pr">12</span><span class="pr">14,50</span></li>
+        <li><div><h3>Quattro stagioni</h3><p>Tomate, fior di latte, jambon, artichaut, olives, champignons</p></div><span class="pr">13</span><span class="pr">16</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <header class="head"><h2>Les bianche</h2><p>Base crème, sans tomate</p><span class="sizes" aria-hidden="true"><b>26</b><b>33</b></span></header>
+      <ul class="pizzas">
+        <li><div><h3>Bianca</h3><p>Fior di latte, ricotta, poivre noir, huile d'olive</p></div><span class="pr">10</span><span class="pr">13</span></li>
+        <li><div><h3>Funghi</h3><p>Crème, fior di latte, champignons, persil <em>V</em></p></div><span class="pr">11</span><span class="pr">14</span></li>
+        <li><div><h3>Norcina</h3><p>Crème, fior di latte, saucisse fraîche, champignons</p></div><span class="pr">13</span><span class="pr">16</span></li>
+        <li><div><h3>Pistacchio</h3><p>Fior di latte, mortadelle, crème de pistache, burrata</p></div><span class="pr">14</span><span class="pr">17</span></li>
+      </ul>
+    </section>
+
+    <section class="builder" id="composer">
+      <header class="head"><h2>Composez la vôtre</h2><p>Puis appelez : on la lance.</p></header>
+      <form id="builder">
+        <fieldset>
+          <legend>Base</legend>
+          <label><input type="radio" name="base" value="0" checked><span>Tomate</span></label>
+          <label><input type="radio" name="base" value="0"><span>Crème</span></label>
+        </fieldset>
+        <fieldset>
+          <legend>Taille</legend>
+          <label><input type="radio" name="size" value="0" checked><span>26 cm · 9&nbsp;€</span></label>
+          <label><input type="radio" name="size" value="1"><span>33 cm · 11&nbsp;€</span></label>
+        </fieldset>
+        <fieldset class="tops">
+          <legend>Garnitures <small>(+1 € en 26 cm, +1,50 € en 33 cm)</small></legend>
+          <label><input type="checkbox" name="top" value="1"><span>Fior di latte</span></label>
+          <label><input type="checkbox" name="top" value="1"><span>Jambon</span></label>
+          <label><input type="checkbox" name="top" value="1"><span>Salami piquant</span></label>
+          <label><input type="checkbox" name="top" value="1"><span>Champignons</span></label>
+          <label><input type="checkbox" name="top" value="1"><span>Olives</span></label>
+          <label><input type="checkbox" name="top" value="1"><span>Anchois</span></label>
+          <label><input type="checkbox" name="top" value="1"><span>Artichaut</span></label>
+          <label><input type="checkbox" name="top" value="1"><span>Ricotta</span></label>
+          <label><input type="checkbox" name="top" value="1"><span>Piment</span></label>
+        </fieldset>
+        <div class="total" aria-live="polite">
+          <p id="line">Marinara 26 cm</p>
+          <p class="amount"><span id="total">9,00</span>&nbsp;€</p>
+          <a class="btn" href="tel:+33100000000">Appeler pour commander</a>
+        </div>
+      </form>
+    </section>
+
+    <section class="notes">
+      <h2>À savoir</h2>
+      <ul>
+        <li><b>Sur place ou à emporter.</b> Comptez 12 minutes d'attente à emporter, un peu plus le samedi soir.</li>
+        <li><b>On ne livre pas.</b> Une pizza voyage mal. Venez la chercher, elle sera meilleure.</li>
+        <li><b>Pas d'ananas, pas de ketchup.</b> Ce n'est pas négociable, mais on vous aime quand même.</li>
+        <li><b>Allergies.</b> Gluten, lait, anchois, fruits à coque (pistache) : demandez, nous détaillons chaque pizza.</li>
+        <li><b>V</b> signale une pizza végétarienne.</li>
+      </ul>
+      <p class="foot">Chez Tonio · 8 rue des Tanneurs · <a href="#">Mentions légales</a></p>
+    </section>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

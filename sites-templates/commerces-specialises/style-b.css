@@ -1,0 +1,33 @@
+:root{--c:#F5B82E;--c2:#0E7C86}
+*{box-sizing:border-box;margin:0}
+body{font-family:Verdana,Geneva,sans-serif;background:#fff;color:#0f2e2c}
+header{display:flex;justify-content:space-between;padding:1rem 2rem;background:var(--c);color:#0f2e2c;font-weight:700;border-bottom:8px solid var(--c2)}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;background:var(--c2)}
+.hero h1{grid-column:1;font-size:clamp(2rem,4.6vw,3.6rem);line-height:1.05;padding:3rem 2rem .5rem;color:#fff}
+.hero p{grid-column:1;padding:0 2rem;color:#fff;font-weight:700}
+.hero .btn{grid-column:1;margin:1.6rem 2rem 3rem;width:max-content;background:#0f2e2c;color:#fff;padding:1rem 2rem;text-decoration:none;font-weight:700;border-radius:8px}
+.hero::after{content:"";grid-column:2;grid-row:1/4;align-self:stretch;background:repeating-linear-gradient(90deg,var(--c) 0 40px,#fff 40px 80px)}
+.services{display:grid;grid-template-columns:repeat(3,1fr)}
+.services div{padding:2.4rem 1.8rem;text-align:center}
+.services div:nth-child(1){background:#f0fdfa}
+.services div:nth-child(2){background:#fff7ed}
+.services div:nth-child(3){background:#f0fdfa}
+.services h3{color:var(--c2);margin-bottom:.5rem}
+.services p{color:#4b6b69;font-size:.95rem}
+footer{background:#0f2e2c;color:#99d6cf;padding:1.6rem;text-align:center;font-size:.85rem}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.hero::after{display:none}.services{grid-template-columns:1fr}}
+
+.photo{display:block;width:100%;object-fit:cover}
+.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
+html{scroll-behavior:smooth}
+@keyframes rise{from{opacity:0;translate:0 24px}}
+@keyframes float{50%{translate:0 -4px}}
+.hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}
+.hero p{animation-delay:.15s}
+.hero .btn{animation:rise .8s .3s ease-out both,float 3s 1.2s ease-in-out infinite}
+.services div:nth-child(2){animation-delay:.12s}
+.services div:nth-child(3){animation-delay:.24s}
+@supports (animation-timeline:view()){.services div:nth-child(n){animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}}
+.services .photo{transition:filter .4s}
+.services div:hover .photo{filter:saturate(1.35) brightness(1.05)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}

@@ -1,0 +1,17 @@
+/* Gastronomique : sombre et doré */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Montserrat:wght@400;500;600&display=swap');
+:root {
+  --bg: #14110f; --bg-alt: #1d1915; --ink: #f2ebe0; --muted: #a89c8c;
+  --accent: #c9a24b; --accent-dark: #a8842f;
+  --surface: #1d1915; --nav-bg: rgba(20,17,15,.95); --line: #3a322a;
+  --ph: #2a241e; --ph2: #342d26; --footer-bg: #0b0908; --footer-ink: #a89c8c;
+  --font-title: 'Cormorant Garamond', Georgia, serif; --font-body: 'Montserrat', system-ui, sans-serif;
+  --radius: 2px; --btn-radius: 2px;
+}
+h1, h2 { font-weight: 500; letter-spacing: .02em; }
+h2 { font-size: 2.6rem; }
+.btn, .tab { text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; }
+.btn { color: #14110f !important; }
+.tab.active, .tab:hover { color: #14110f; }
+.tag { background: #2e3a24; color: #b5d49c; }
+.btn-ghost { color: #fff !important; }

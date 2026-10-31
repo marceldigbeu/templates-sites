@@ -1,0 +1,31 @@
+:root{--c:#0891B2;--c2:#34D399}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:#fff;color:#0b3440}
+header{background:var(--c);color:#fff;padding:1.2rem 2rem;font-weight:600;display:flex;align-items:center;gap:.6rem}
+header::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--c2);box-shadow:20px 0 0 var(--c2),40px 0 0 var(--c2)}
+.hero{padding:5rem 2rem;background:radial-gradient(circle at 1px 1px,rgba(0,0,0,.07) 1px,transparent 0) 0 0/22px 22px,#eefafd}
+.hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);font-weight:300;color:var(--c)}
+.hero h1 strong{font-weight:800}
+.hero p{margin:1rem 0 2rem;color:#3d6b75}
+.btn{background:var(--c);color:#fff;padding:1rem 2rem;border-radius:12px;text-decoration:none;font-weight:600}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;padding:2.5rem 2rem}
+.services div{background:#fff;border:2px solid #d4f1f9;border-radius:16px;padding:1.4rem;position:relative}
+.services div::after{content:"";position:absolute;top:12px;right:12px;width:10px;height:10px;border-radius:50%;background:var(--c2)}
+.services h3{color:var(--c);margin-bottom:.4rem}
+.services p{color:#3d6b75;font-size:.95rem}
+footer{background:#0b3440;color:#bfe9f5;padding:1.4rem;text-align:center;font-size:.9rem}
+
+.photo{display:block;width:100%;object-fit:cover}
+.services .photo{height:170px;grid-column:1/-1;border-radius:8px;margin-bottom:1rem}
+html{scroll-behavior:smooth}
+@keyframes rise{from{opacity:0;translate:0 24px}}
+@keyframes float{50%{translate:0 -4px}}
+.hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}
+.hero p{animation-delay:.15s}
+.hero .btn{animation:rise .8s .3s ease-out both,float 3s 1.2s ease-in-out infinite}
+.services div:nth-child(2){animation-delay:.12s}
+.services div:nth-child(3){animation-delay:.24s}
+@supports (animation-timeline:view()){.services div:nth-child(n){animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}}
+.services .photo{transition:filter .4s}
+.services div:hover .photo{filter:saturate(1.35) brightness(1.05)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
