@@ -1,28 +1,214 @@
-:root{--c:#7C3AED;--c2:#EC4899}
-*{box-sizing:border-box;margin:0}
-body{font-family:'Didot','Bodoni MT',Georgia,serif;background:linear-gradient(160deg,#fff0f6,#fff7e6 55%,#f3e8ff);color:#2a1830}
-header{text-align:center;padding:1.8rem;font-size:1.9rem;font-style:italic;background:linear-gradient(90deg,var(--c2),#a855f7,#f59e0b);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
-.hero{text-align:center;padding:4rem 2rem}
-.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-style:italic;font-weight:400;line-height:1;background:linear-gradient(100deg,var(--c2),#8b5cf6 50%,#f59e0b);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{margin:1.2rem 0 2rem;letter-spacing:.3em;text-transform:uppercase;font-size:.85rem;color:#6b4a73}
-.btn{background:linear-gradient(100deg,var(--c2),#8b5cf6);color:#fff;padding:1rem 2.6rem;border-radius:50px;text-decoration:none;box-shadow:0 10px 24px rgba(168,85,247,.35);letter-spacing:.1em}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;padding:2rem}
-.services div{background:rgba(255,255,255,.75);backdrop-filter:blur(6px);border-radius:24px;padding:1.8rem;text-align:center;border:1px solid #fff;box-shadow:0 12px 30px rgba(168,85,247,.12)}
-.services div:nth-child(2){transform:translateY(-14px)}
-.services h3{font-style:italic;font-size:1.5rem;color:var(--c2);margin-bottom:.4rem}
-.services p{color:#6b4a73}
-footer{text-align:center;padding:2rem;color:#8b5cf6;font-style:italic}
+/* Coiffeurs & barbiers - Style A: Simplified */
+:root{
+  --primary: #dc2626;
+  --primary-light: #fca5a5;
+  --secondary: #ea580c;
+  --accent: #eab308;
+  --muted: #78350f;
+  --light: #fef3c7;
+  --dark: #9a3412;
+  --transition: 0.2s ease;
+}
 
-.photo{display:block;width:100%;object-fit:cover}
-.services .photo{width:130px;height:130px;border-radius:50%;margin:0 auto 1rem;grid-column:1/-1;border:4px solid var(--c2)}html{scroll-behavior:smooth}
-@keyframes rise{from{opacity:0;translate:0 24px}}
-@keyframes float{50%{translate:0 -4px}}
-.hero h1,.hero p,.hero .btn,.services div{animation:rise .8s ease-out both}
-.hero p{animation-delay:.15s}
-.hero .btn{animation:rise .8s .3s ease-out both,float 3s 1.2s ease-in-out infinite}
-.services div:nth-child(2){animation-delay:.12s}
-.services div:nth-child(3){animation-delay:.24s}
-@supports (animation-timeline:view()){.services div:nth-child(n){animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}}
-.services .photo{transition:filter .4s}
-.services div:hover .photo{filter:saturate(1.35) brightness(1.05)}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  background: var(--light);
+  color: var(--primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--light); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #f87171; }
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(220, 38, 38, 0.95);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.navbar .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -.03em;
+}
+
+.nav-links { display: none; }
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 2rem;
+  position: relative;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* Booking CTA */
+.booking-cta {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 20px 40px rgba(220, 38, 38, 0.3);
+}
+
+.booking-cta h2 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.booking-cta p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Services */
+.services {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+
+.service-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) { .service-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); } }
+
+.service-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.15);
+  transition: var(--transition);
+  border-top: 4px solid var(--primary);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(220, 38, 38, 0.25);
+}
+
+.service-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Service color badges */
+.service-card .badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Reviews */
+.reviews {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  color: var(--primary);
+}
+
+.review-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.review-card p { margin-bottom: 0.5rem; color: var(--primary); }
+
+.review-card .client {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* CTA Bottom */
+.footer-cta {
+  padding: 4rem 2rem;
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.footer-cta h2 { margin-bottom: 1rem; }
+
+.footer-cta p { opacity: 0.8; margin-bottom: 1.5rem; }
+
+.footer-cta .btn { color: white; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+}
