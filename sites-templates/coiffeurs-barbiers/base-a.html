@@ -3,21 +3,48 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Salon de coiffure mixte - Coupe, barbe, couleur">
 <title>Salon Oriel - Nice</title>
 <link rel="stylesheet" href="style-a.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>Salon Oriel</header>
-<section class="hero">
-<h1>Votre style, notre savoir-faire</h1>
+<header class="-brand" aria-label="En-tête du salon">
+<h1 class="logo">Salon Oriel</h1>
+<nav>
+<ul>
+<li><a href="#accueil" aria-label="Accueil">Accueil</a></li>
+<li><a href="#services" aria-label="Services">Services</a></li>
+<li><a href="#propos" aria-label="À propos">À propos</a></li>
+<li><a href="#contact" aria-label="Contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<!-- ACCUEIL -->
+<section class="hero" id="accueil" aria-labelledby="salon-title">
+<div class="container">
+<h2 class="eyebrow" id="salon-title">Votre style, notre savoir-faire</h2>
+<h1>Coiffure moderne & barbe</h1>
 <p>Nice</p>
-<a class="btn" href="tel:0600000008">Appeler 0600000008</a>
+<a class="btn" href="tel:0600000008" aria-label="Appeler le salon">Appeler 0600000008</a>
+</div>
 </section>
-<section class="services">
-<div><img class="photo" src="s1.jpg" alt="Coupe"><h3>Coupe</h3><p>Homme et femme</p></div>
-<div><img class="photo" src="s2.jpg" alt="Barbe"><h3>Barbe</h3><p>Taille et soin</p></div>
-<div><img class="photo" src="s3.jpg" alt="Couleur"><h3>Couleur</h3><p>Mèches et balayage</p></div>
+<!-- SERVICES -->
+<section class="services" id="services">
+<div class="container">
+<div><img class="photo" src="s1.jpg" alt="Coupe homme et femme"><h3>Coupe</h3><p>Homme et femme</p></div>
+<div><img class="photo" src="s2.jpg" alt="Barbe taille et soin"><h3>Barbe</h3><p>Taille et soin</p></div>
+<div><img class="photo" src="s3.jpg" alt="Couleur mèches et balayage"><h3>Couleur</h3><p>Mèches et balayage</p></div>
+</div>
 </section>
-<footer>Salon Oriel · 0600000008 · Nice</footer>
+</main>
+<footer class="footer" aria-label="Pied de page">
+<div class="container">
+<span>Salon Oriel · <a href="tel:0600000008">0600000008</a> · Nice</span>
+</div>
+</footer>
 </body>
 </html>
